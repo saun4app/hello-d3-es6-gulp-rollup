@@ -57,7 +57,7 @@ Embedding
 ```
 in `index.html`.
 
-There are discussions about this (or similar) issues.  I have not found a clean solution yet, and have spent enough time on this for now.  Any suggestions would be appreciated.
+There are discussions about this (or similar) issues.  I have not found a clean solution yet, and have spent enough time on this for now.  Any suggestions would be greatly appreciated.
 - https://code.lengstorf.com/learn-rollup-js/
 - https://github.com/rollup/rollup/issues/592
 - https://github.com/rollup/rollup-plugin-commonjs/issues/6
