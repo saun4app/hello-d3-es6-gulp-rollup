@@ -10,7 +10,7 @@ hello-d3-es6-gulp-rollup provides an example of using the following to display t
 - gulp (without rollup.config.js)
 
 ## Example
-![Demo screen](https://github.com/saun4app/hello-d3-es6-gulp-rollup/demo-screen.png "Demo screen")
+![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
 
 ## Install
 ```
