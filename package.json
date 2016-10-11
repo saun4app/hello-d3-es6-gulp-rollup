@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "build": "gulp build",
-    "ugly": "gulp ugly",
+    "release": "gulp ugly",
     "start": "http-server ./build -p 3020 --cors"
   },
   "repository": {
@@ -14,6 +14,14 @@
   },
   "author": "Saun Shewanown",
   "license": "ISC",
+  "keywords": [
+    "d3",
+    "v4",
+    "es6",
+    "rollup.js",
+    "gulp",
+    "hello"
+  ],
   "bugs": {
     "url": "https://github.com/saun4app/hello-d3-es6-gulp-rollup/issues"
   },

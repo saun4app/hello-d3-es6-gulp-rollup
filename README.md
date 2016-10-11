@@ -1,13 +1,10 @@
 # hello-d3-es6-rollup
 
-
-
-
 hello-d3-es6-gulp-rollup provides an example of using the following to display text on the screen:
-- D3.js (v4)
-- es6 (ES2015)
-- Rollup.js
-- gulp (without rollup.config.js)
+- `d3.js` (v4)
+- `es6` (`ES2015`)
+- `rollup.js`
+- `gulp` (**without** `rollup.config.js`)
 
 ## Example
 ![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
