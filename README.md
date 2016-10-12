@@ -1,4 +1,4 @@
-# hello-d3-es6-rollup
+# hello-d3-es6-gulp-rollup
 
 `hello-d3-es6-gulp-rollup` provides an example of using the following to display text on the screen:
 - `d3.js` (v4)
@@ -7,9 +7,8 @@
 - `gulp` (**without** `rollup.config.js`)
 
 #### Example
-![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
-
-![View in browser](https://saun4app.github.io/hello-d3-es6-gulp-rollup/){:target="_blank"}
+<img src="https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png"
+	alt="Demo screen" onclick="window.open('(https://saun4app.github.io/hello-d3-es6-gulp-rollup', '_blank');" />
 
 #### Install
 ```
@@ -43,8 +42,8 @@ $ http-server ./build -p 3020
 ```
 View the page on `http://localhost:3020/`
 
-![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
-![View in browser](https://saun4app.github.io/hello-d3-es6-gulp-rollup/){:target="_blank"}
+<img src="https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png"
+	alt="Demo screen" onclick="window.open('(https://saun4app.github.io/hello-d3-es6-gulp-rollup', '_blank');" />
 
 #### Known Issues
 
