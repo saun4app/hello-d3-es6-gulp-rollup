@@ -7,7 +7,8 @@
 - `gulp` (**without** `rollup.config.js`)
 
 #### Example
-![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)(https://saun4app.github.io/hello-d3-es6-gulp-rollup)
+![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
+[view in browser](http://google.com)(https://saun4app.github.io/hello-d3-es6-gulp-rollup)
 
 #### Install
 ```
