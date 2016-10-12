@@ -1,4 +1,4 @@
-# hello-d3-es6-rollup
+# hello-d3-es6-gulp-rollup
 
 `hello-d3-es6-gulp-rollup` provides an example of using the following to display text on the screen:
 - `d3.js` (v4)
