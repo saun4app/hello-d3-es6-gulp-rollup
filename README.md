@@ -7,9 +7,10 @@
 - `gulp` (**without** `rollup.config.js`)
 
 #### Example
-![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
+	<iframe src="https://saun4app.github.io/hello-d3-es6-gulp-rollup" 
+	width='420' height="315' 
+	frameborder='0' allowfullscreen></iframe>
 
-![View in browser](https://saun4app.github.io/hello-d3-es6-gulp-rollup/){:target="_blank"}
 #### Install
 ```
 $ git clone git@github.com:saun4app/hello-d3-es6-gulp-rollup.git demo-app
