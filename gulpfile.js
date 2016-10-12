@@ -1,3 +1,5 @@
+'use strict';
+
 let gulp = require('gulp');
 let gulp_rollup = require('gulp-rollup');
 let gulp_htmlmin = require('gulp-htmlmin');
