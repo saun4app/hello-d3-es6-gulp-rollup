@@ -4,7 +4,9 @@ let gulp = require('gulp');
 let gulp_rollup = require('gulp-rollup');
 let gulp_htmlmin = require('gulp-htmlmin');
 let gulp_concat = require('gulp-concat');
+var clean_dest = require('gulp-clean-dest');
 let sourcemaps = require('gulp-sourcemaps');
+var gulp_sequence = require('gulp-sequence');
 let gulp_uglify = require('gulp-uglify');
 let rollup = require('rollup');
 let rollup_babel = require('rollup-plugin-babel');
@@ -15,8 +17,11 @@ let node_globals = require('rollup-plugin-node-globals');
 let node_resolve = require('rollup-plugin-node-resolve');
 
 ////////
+
 gulp.task('default', ['build']);
-gulp.task('build', ['rollup', 'css', 'html']);
+gulp.task('build', gulp_sequence('html', ['rollup', 'css'], 'docs'));
+
+// gulp.task('build', ['rollup', 'css', 'html']);
 gulp.task('ugly', ['set_ugly', 'build']);
 
 ////////
@@ -71,8 +76,18 @@ gulp.task('css', function () {
 
 gulp.task('html', function () {
     return gulp.src('src/**/*.html')
+        .pipe(clean_dest(build_path))
         .pipe(gulp_htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(build_path));
+});
+
+gulp.task('docs', function () {
+    let src_path = `${build_path}/*`;
+    return gulp.src([src_path, src_path + 'js/*'])
+        .pipe(clean_dest('docs'))
+        .pipe(gulp.dest('docs'));
+
+
 });
 
 //
