@@ -7,7 +7,7 @@
 - `gulp` (**without** `rollup.config.js`)
 
 #### Example
-<iframe src="https://saun4app.github.io/hello-d3-es6-gulp-rollup" width='420' height="315' frameborder='0' allowfullscreen></iframe>
+![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)(https://saun4app.github.io/hello-d3-es6-gulp-rollup)
 
 #### Install
 ```
