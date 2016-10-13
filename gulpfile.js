@@ -32,6 +32,7 @@ let src_path = 'src';
 let build_path = 'build';
 let js_src = [src_path, 'js', '**', '*.js'].join('/');
 let js_build = [build_path, 'js'].join('/');
+let css_build = [build_path, 'css'].join('/');
 let is_ugly = false;
 let plugin_array = get_plugin_array();
 
@@ -71,23 +72,20 @@ gulp.task('css', function () {
         .pipe(sourcemaps.init())
         .pipe(gulp_concat('main.css'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(build_path));
+        .pipe(gulp.dest(css_build));
 });
 
 gulp.task('html', function () {
     return gulp.src('src/**/*.html')
-        .pipe(clean_dest(build_path))
         .pipe(gulp_htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(build_path));
 });
 
 gulp.task('docs', function () {
     let src_path = `${build_path}/*`;
-    return gulp.src([src_path, src_path + 'js/*'])
-        .pipe(clean_dest('docs'))
+    let src_array = [src_path + '/*', js_build + '/*', css_build + '/*'];
+    return gulp.src(src_array)
         .pipe(gulp.dest('docs'));
-
-
 });
 
 //

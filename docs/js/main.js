@@ -231,7 +231,9 @@ var D3TextList = function () {
             try {
                 this.set_value(param_obj);
 
-                this.el_list.append('li').attr('class', self.el_item_class).text(self.el_item_text);
+                var el_item = this.el_list.append('li').attr('class', self.el_item_class).text(self.el_item_text);
+
+                this._set_el_list_event();
             } catch (error) {
                 console.error('D3TextList::append_text() ' + error);
             }
@@ -246,11 +248,23 @@ var D3TextList = function () {
             this.el_container_id = param_obj.el_container_id ? param_obj.el_container_id : 'el_message_list';
             this.el_list_class = param_obj.el_list_class ? param_obj.el_list_class : 'w3-ul w3-border';
             this.el_item_class = param_obj.el_item_class ? param_obj.el_item_class : 'good-value';
+            this.el_mouseover_class = param_obj.el_mouseover_class ? param_obj.el_mouseover_class : 'w3-large';
             this.el_item_text = param_obj.el_item_text ? param_obj.el_item_text : 'd3 es6 is good.';
 
             this._set_el_list();
 
             return this;
+        }
+    }, {
+        key: '_set_el_list_event',
+        value: function _set_el_list_event() {
+            var self = this;
+
+            this.el_list.selectAll('li').on('mouseover', function () {
+                d3.select(this).classed(self.el_mouseover_class, true);
+            }).on('mouseout', function () {
+                d3.select(this).classed(self.el_mouseover_class, false);
+            });
         }
     }, {
         key: '_set_el_list',
@@ -288,4 +302,4 @@ text_list_obj.append_item(param_obj);
 
 }(d3));
 
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXMiOltdLCJzb3VyY2VzQ29udGVudCI6W10sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXMiOltdLCJzb3VyY2VzQ29udGVudCI6W10sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
