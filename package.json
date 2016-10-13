@@ -31,14 +31,14 @@
     "gulp-put": "0.0.3"
   },
   "devDependencies": {
-    "babel-core": "^6.17.0",
-    "babel-preset-es2015": "^6.16.0",
+    "babel-core": "latest",
+    "babel-preset-es2015": "latest",
     "babel-preset-es2015-rollup": "latest",
     "gulp": "latest",
-    "gulp-clean-dest": "^0.1.1",
+    "gulp-clean-dest": "latest",
     "gulp-htmlmin": "latest",
     "gulp-rollup": "latest",
-    "gulp-sequence": "^0.4.6",
+    "gulp-sequence": "latest",
     "gulp-sourcemaps": "latest",
     "http-server": "latest",
     "rollup": "latest",
@@ -49,7 +49,6 @@
     "rollup-plugin-json": "latest",
     "rollup-plugin-node-globals": "latest",
     "rollup-plugin-node-resolve": "latest",
-    "rollup-plugin-uglify": "latest",
-    "sequence": "^3.0.0"
+    "rollup-plugin-uglify": "latest"
   }
 }
