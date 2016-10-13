@@ -82,11 +82,17 @@ gulp.task('html', function () {
 });
 
 gulp.task('docs', function () {
-    let src_path = `${build_path}/*`;
-    let src_array = [src_path + '/*', js_build + '/*', css_build + '/*'];
-    return gulp.src(src_array)
+    gulp.src([build_path + '/*'])
         .pipe(gulp.dest('docs'));
+
+    gulp.src([js_build + '/*'])
+        .pipe(gulp.dest('docs/js'));
+
+    gulp.src([css_build + '/*'])
+        .pipe(gulp.dest('docs/css'));
 });
+
+
 
 //
 function get_plugin_array() {
