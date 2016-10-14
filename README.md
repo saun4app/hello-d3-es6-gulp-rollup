@@ -5,6 +5,7 @@
 - `es6` (`ES2015`)
 - `rollup.js`
 - `gulp` (**without** `rollup.config.js`)
+- `w3css`
 
 #### Example
 <a href="https://saun4app.github.io/hello-d3-es6-rollup" target="_blank">
@@ -48,28 +49,9 @@ View the page on `http://localhost:3020/`
          alt="Demo screen"/>
 </a>
 
-
-#### Known Issues
-
-##### Problem:
-`Uncaught ReferenceError: d3 is not defined`
-
-##### Temporary "Solution"
-Embedding
-```
-<script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
-```
-in `index.html`.
-
-There are discussions about this (or similar) issues.  I have not found a clean solution yet, and have spent enough time on this for now.  Any suggestions would be greatly appreciated.
-- https://code.lengstorf.com/learn-rollup-js/
-- https://github.com/rollup/rollup/issues/592
-- https://github.com/rollup/rollup-plugin-commonjs/issues/6
-- https://github.com/rollup/rollup-plugin-commonjs/issues/31
-
-
 #### Resources
 - https://d3js.org
 - https://github.com/jlengstorf/learn-rollup
 - https://github.com/mizmaar3/gulp-es6-rollup-boilerplate
 - http://rollupjs.org
+- http://www.w3schools.com/w3css
