@@ -4,8 +4,9 @@ var rollup_babel = require('rollup-plugin-babel');
 var rollup_commonjs = require('rollup-plugin-commonjs');
 var rollup_json = require('rollup-plugin-json');
 var rollup_multi_entry = require('rollup-plugin-multi-entry');
-var node_globals = require('rollup-plugin-node-globals');
-var node_resolve = require('rollup-plugin-node-resolve');
+var rollup_globals = require('rollup-plugin-node-globals');
+var rollup_resolve = require('rollup-plugin-node-resolve');
+var rollup_replace = require('rollup-plugin-replace');
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -17,11 +18,14 @@ function get_plugin_array(is_ugly = false) {
 
     plugin_array.push(rollup_multi_entry());
 
-    plugin_array.push(node_resolve({
+    plugin_array.push(rollup_resolve({
         jsnext: true,
         main: true,
         browser: true
     }));
+
+    plugin_array.push(rollup_globals());
+
 
     plugin_array.push(rollup_commonjs({
         include: ['node_modules/**']
@@ -34,7 +38,10 @@ function get_plugin_array(is_ugly = false) {
     }));
 
     if (is_ugly) {
-        plugin_array.push(rollup_uglify());
+        rollup_replace({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+            plugin_array.push(rollup_uglify());
     }
 
     return plugin_array;

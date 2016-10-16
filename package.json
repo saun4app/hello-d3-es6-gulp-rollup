@@ -51,6 +51,7 @@
     "rollup-plugin-multi-entry": "latest",
     "rollup-plugin-node-globals": "latest",
     "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "latest"
   }
 }

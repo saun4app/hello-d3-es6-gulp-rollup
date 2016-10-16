@@ -2,12 +2,14 @@
   "rollup_option": {
     "entry": [
       "src/js/*.js"
-    ],
-    "globals": {
-      "d3": "d3"
-    }
+    ]
   },
-  "bundle_option": {
+  "bundle_dev": {
+    "format": "iife",
+    "moduleName": "demo_app",
+    "sourceMap": "inline"
+  },
+  "bundle_production": {
     "format": "iife",
     "moduleName": "demo_app"
   }
